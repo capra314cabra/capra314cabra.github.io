@@ -1,0 +1,81 @@
+body{
+    background-color: rgb(36, 36, 36);
+}.bottom{
+    width: 300px;
+    margin: 30px 50px 0px auto;
+
+    text-align: right;
+
+    color: white;
+}@keyframes h1Animation{
+    0%{
+        border-bottom-color: rgb(19, 113, 255);
+    }
+    25%{
+        border-bottom-color: rgb(42, 224, 66);
+    }
+    50%{
+        border-bottom-color: rgb(255, 233, 34);
+    }
+    75%{
+        border-bottom-color: rgb(42, 224, 66);
+    }
+    100%{
+        border-bottom-color: rgb(19, 113, 255);
+    }
+}
+
+h1{
+    border-bottom: solid rgb(19, 113, 255) 5px;
+}
+
+h1:hover{
+    animation-name: h1Animation;
+    animation-duration: 2s;
+}
+
+h2{
+    border-bottom: solid rgb(255, 200, 19) 3px;
+}
+
+p{
+    padding: 15px;
+}
+.header{
+    display: flex;
+}
+
+.title{
+    padding: 30px;
+}
+
+@keyframes link-hover{
+    0%{
+        color: rgb(248, 176, 20);
+    }
+    100%{
+        color: rgb(37, 165, 250);
+    }
+}
+
+a.internal-link{
+    margin: 30px;
+    color: gray;
+    font-size: 1.5em;
+}
+
+a.internal-link:hover{
+    color: rgb(37, 165, 250);
+
+    animation-name: link-hover;
+    animation-duration: 1.2s;
+    animation-timing-function: linear;
+}
+.main-content{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px 50px 10px 50px;
+    border-radius: 30px;
+
+    background-color: whitesmoke;
+}

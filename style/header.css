@@ -1,0 +1,30 @@
+.header{
+    display: flex;
+}
+
+.title{
+    padding: 30px;
+}
+
+@keyframes link-hover{
+    0%{
+        color: rgb(248, 176, 20);
+    }
+    100%{
+        color: rgb(37, 165, 250);
+    }
+}
+
+a.internal-link{
+    margin: 30px;
+    color: gray;
+    font-size: 1.5em;
+}
+
+a.internal-link:hover{
+    color: rgb(37, 165, 250);
+
+    animation-name: link-hover;
+    animation-duration: 1.2s;
+    animation-timing-function: linear;
+}

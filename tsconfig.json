@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "outFile": "homepage-min.js"
+    },
+    "include": [
+        "**/*.ts"
+    ]
+}
