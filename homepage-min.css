@@ -1,15 +1,26 @@
 body{
     background-color: rgb(36, 36, 36);
 }.bottom{
+    text-align: right;
+
     width: 300px;
     margin: 30px 50px 0px auto;
 
-    text-align: right;
-
     color: white;
-}.comments{
+}
+
+@media screen and (max-width: 1000px) {
+    .bottom{
+        margin: 10px 20px 0px auto;
+    }
+}
+.comments{
     margin-top: 50px;
-}@keyframes h1Animation{
+}/*
+    h1
+*/
+
+@keyframes h1Animation{
     0%{
         border-bottom-color: rgb(19, 113, 255);
     }
@@ -36,20 +47,76 @@ h1:hover{
     animation-duration: 2s;
 }
 
+@media screen and (max-width: 1000px) {
+    h1{
+        border-bottom-width: 2px;
+    }
+}
+
+/*
+    h2
+*/
+
 h2{
     border-bottom: solid rgb(255, 200, 19) 3px;
 }
 
+@media screen and (max-width: 1000px) {
+    h2{
+        border-bottom-width: 1.5px;
+    }
+}
+
+/*
+    p
+*/
+
 p{
     padding: 15px;
 }
-.header{
-    display: flex;
-}
 
-.title{
+@media screen and (max-width: 1000px) {
+    p{
+        padding: 5px;
+    }
+}
+/*
+    header
+*/
+
+.header{
+    display: inline-block;
+
     padding: 30px;
 }
+
+/*
+    menu
+*/
+
+.menu{
+    display: inline-block;
+}
+
+/*
+    title
+*/
+
+.title{
+    background: transparent;
+}
+
+@media screen and (max-width: 1000px) {
+    .title{
+        width: 300px;
+        height: 30px;
+        padding: 0px;
+    }
+}
+
+/*
+    a.internal-link
+*/
 
 @keyframes link-hover{
     0%{
@@ -73,6 +140,12 @@ a.internal-link:hover{
     animation-duration: 1.2s;
     animation-timing-function: linear;
 }
+
+@media screen and (max-width: 1000px) {
+    a.internal-link{
+        margin: 5px;
+    }
+}
 .main-content{
     max-width: 800px;
     margin: 0 auto;
@@ -80,4 +153,12 @@ a.internal-link:hover{
     border-radius: 30px;
 
     background-color: whitesmoke;
+}
+
+@media screen and (max-width: 1000px) {
+    .main-content{
+        margin: 0 10px 10px 10px;
+        padding: 10px 10px 10px 10px;
+        border-radius: 10px;
+    }
 }

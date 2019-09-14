@@ -1,10 +1,40 @@
-.header{
-    display: flex;
-}
+/*
+    header
+*/
 
-.title{
+.header{
+    display: inline-block;
+
     padding: 30px;
 }
+
+/*
+    menu
+*/
+
+.menu{
+    display: inline-block;
+}
+
+/*
+    title
+*/
+
+.title{
+    background: transparent;
+}
+
+@media screen and (max-width: 1000px) {
+    .title{
+        width: 300px;
+        height: 30px;
+        padding: 0px;
+    }
+}
+
+/*
+    a.internal-link
+*/
 
 @keyframes link-hover{
     0%{
@@ -27,4 +57,10 @@ a.internal-link:hover{
     animation-name: link-hover;
     animation-duration: 1.2s;
     animation-timing-function: linear;
+}
+
+@media screen and (max-width: 1000px) {
+    a.internal-link{
+        margin: 5px;
+    }
 }
