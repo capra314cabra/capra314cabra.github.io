@@ -1,0 +1,17 @@
+#
+# Editor
+#
+
+/.vscode
+
+#
+# Python
+#
+
+**/__pycache__
+
+#
+# Output
+#
+
+/publish
