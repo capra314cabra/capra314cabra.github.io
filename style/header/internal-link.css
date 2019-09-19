@@ -1,38 +1,4 @@
 /*
-    header
-*/
-
-.header{
-    display: inline-block;
-
-    padding: 30px;
-}
-
-/*
-    menu
-*/
-
-.menu{
-    display: inline-block;
-}
-
-/*
-    title
-*/
-
-.title{
-    background: transparent;
-}
-
-@media screen and (max-width: 1000px) {
-    .title{
-        width: 300px;
-        height: 30px;
-        padding: 0px;
-    }
-}
-
-/*
     a.internal-link
 */
 

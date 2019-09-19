@@ -1,0 +1,14 @@
+/*
+    producedBy
+*/
+
+.producedBy{
+    display: inline-block;
+    text-align: right;
+}
+
+@media screen and (max-width: 1000px) {
+    .producedBy{
+        display: block;
+    }
+}
