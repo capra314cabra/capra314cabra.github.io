@@ -1,6 +1,8 @@
 #!/bin/bash
 
-SCRIPT_FULL_PATH=`readlink -f $0`
+#
+# Run tasks
+#
 
 runItems=("tsc" "./scripts/css_builder.py" "./scripts/html_builder.py" "./scripts/image_builder.py")
 
@@ -10,3 +12,9 @@ do
     $script
     echo "Finished"
 done
+
+#
+# Additional tasks
+#
+
+cp ./googlec0a860b5fd253174.html ./publish/googlec0a860b5fd253174.html
