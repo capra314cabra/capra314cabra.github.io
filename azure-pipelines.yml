@@ -8,7 +8,7 @@ jobs:
     vmImage: "ubuntu-latest"
   steps:
   - script: |
-      npm install -g typescript
+      sudo npm install -g typescript
     displayName: "Install Typescript"
   - script: |
       chmod +x ./build.sh
