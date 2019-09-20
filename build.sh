@@ -1,6 +1,17 @@
 #!/bin/bash
 
 #
+# Add permissions
+#
+
+requirePermissionItems=("./scripts/css_builder.py" "./scripts/html_builder.py" "./scripts/image_builder.py")
+
+for item in ${requirePermissionItems[@]}
+do
+    chmod +x $item
+done
+
+#
 # Run tasks
 #
 
