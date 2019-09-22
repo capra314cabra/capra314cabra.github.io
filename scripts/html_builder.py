@@ -4,23 +4,17 @@ import os
 import glob
 import json
 import sitemap_generator as sg
-import ogp_tag_creater as ogp
+import variable_reflector as varref
 
-HEADER_HTML_PATH = "./header.html"
-FOOTER_HTML_PATH = "./footer.html"
+TEMPLATE_HTML_PATH = "./template.html"
 
 # Initalize sitemap generator
 sitemap_generator = sg.SiteMapGenerator()
 
-# Read header contents
-header_contents = ""
-with open(HEADER_HTML_PATH, "r") as f:
-    header_contents = f.read()
-
-# Read footer contents
-footer_contents = ""
-with open(FOOTER_HTML_PATH, "r") as f:
-    footer_contents = f.read()
+# Read template contents
+template_content = ""
+with open(TEMPLATE_HTML_PATH, "r") as f:
+    template_content = f.read()
 
 # Do to each files
 pattern = glob.glob("./contents/**/*.html", recursive=True)
@@ -49,17 +43,22 @@ for file in pattern:
     relative_path = "https://capra314cabra.github.io/" + os.path.basename(file)
     sitemap_generator.add(relative_path, settingData["lastdate"], settingData["priority"], settingData["bilingual"])
 
-    # Concatenate header and footer
-    file_content = header_contents + file_content + footer_contents
+    # Initialize Variable Reflector
+    vref = varref.VariableReflector(template_content)
 
-    # Add opg tags
-    opg_tag_content = []
-    opg_tag_list = ["title", "type", "url", "image", "description", "site_name"]
-    for tag in opg_tag_list:
-        opg_tag_content.append([tag, settingData[tag]])
-    file_content = ogp.OGPTagCreater.replace(html_text=file_content, params=opg_tag_content)
+    # Concatenate header and footer
+    vref.setParam("main_contents", file_content)
+
+    # OGP tags
+    vref.setParam("title", settingData["title"])
+    vref.setParam("type", settingData["type"])
+    vref.setParam("url", settingData["url"])
+    vref.setParam("image", settingData["image"])
+    vref.setParam("description", settingData["description"])
+    vref.setParam("site_name", settingData["site_name"])
 
     # Bake HTML file
+    file_content = vref.getHTMLText()
     with open(publishFile, "w") as f:
         f.write(file_content)
 
