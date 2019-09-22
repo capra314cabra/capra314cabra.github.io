@@ -47,7 +47,7 @@ for file in pattern:
 
     # Add this to the consists of sitemap generator
     relative_path = "https://capra314cabra.github.io/" + os.path.basename(file)
-    sitemap_generator.add(relative_path, settingData["lastdate"], settingData["priority"])
+    sitemap_generator.add(relative_path, settingData["lastdate"], settingData["priority"], settingData["bilingual"])
 
     # Concatenate header and footer
     file_content = header_contents + file_content + footer_contents
