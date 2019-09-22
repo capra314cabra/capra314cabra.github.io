@@ -4,7 +4,6 @@ import os
 import glob
 import json
 import sitemap_generator as sg
-import ogp_tag_creater as ogp
 import variable_reflector as varref
 
 TEMPLATE_HTML_PATH = "./template.html"
