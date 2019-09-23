@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 class SiteMapGenerator:
     OUTPUT_PATH = "./publish/sitemap.xml"
     

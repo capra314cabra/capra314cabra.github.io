@@ -1,28 +1,36 @@
 #!/bin/bash
 
 #
+# Predefined
+#
+
+taskColor="\e[44m"
+runTask() {
+    if [ $taskColor = "\e[44m" ]
+    then
+        taskColor="\e[42m"
+    else
+        taskColor="\e[44m"
+    fi
+    echo -e "$taskColor Running\e[m $1..."
+    $1
+    echo -e "$taskColor Finished\e[m $1"
+}
+
+#
 # Add permissions
 #
 
-requirePermissionItems=("./scripts/css_builder.py" "./scripts/html_builder.py" "./scripts/image_builder.py")
-
-for item in ${requirePermissionItems[@]}
-do
-    chmod +x $item
-done
+# None
 
 #
-# Run tasks
+# Build tasks
 #
 
-runItems=("tsc" "./scripts/css_builder.py" "./scripts/html_builder.py" "./scripts/image_builder.py")
-
-for script in ${runItems[@]}
-do
-    echo "Running $script ..."
-    $script
-    echo "Finished"
-done
+runTask "tsc"
+runTask "python3 ./scripts/css_builder.py"
+runTask "python3 ./scripts/html_builder.py"
+runTask "python3 ./scripts/image_builder.py"
 
 #
 # Additional tasks
