@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 import glob
 
 OUTPUT_TO = "./publish/homepage-min.css"
