@@ -2,61 +2,63 @@ import os
 import glob
 import json
 import sitemap_generator as sg
-import variable_reflector as varref
+import html_reflector as ref
+import site_db as db
 
 TEMPLATE_HTML_PATH = "./template.html"
 
+#
 # Initalize sitemap generator
+#
 sitemap_generator = sg.SiteMapGenerator()
+site_db = db.SiteDB()
 
+#
 # Read template contents
+#
 template_content = ""
 with open(TEMPLATE_HTML_PATH, "r") as f:
     template_content = f.read()
-
+#
 # Do to each files
+#
 pattern = glob.glob("./contents/**/*.html", recursive=True)
 for file in pattern:
 
     print("Load html file: " + file)
 
+    #
     # Load a HTML file
+    #
     file_content = ''
     with open(file, "r") as f:
         file_content = f.read()
-
-    # Get a setting file
-    fileWithoutExtension = os.path.splitext(file)[0]
-    settingFile = fileWithoutExtension + ".json"
-
-    # Load a setting file
-    settingData = { }
-    with open(settingFile, "r") as f:
-        settingData = json.load(f)
-
+    #
+    # Load site data
+    #
+    file_name = os.path.basename(file)
+    site_data = site_db.get_page_by_name(file_name)
+    #
     # Get the path where it will be published
-    publishFile = settingData["output_to"] + os.path.basename(file)
-
+    #
+    publishFile = site_data["output_to"] + os.path.basename(file)
+    #
     # Add this to the consists of sitemap generator
-    relative_path = "https://capra314cabra.github.io/" + os.path.basename(file)
-    sitemap_generator.add(relative_path, settingData["lastdate"], settingData["priority"], settingData["bilingual"])
-
+    #
+    new_url = "https://capra314cabra.github.io/" + os.path.basename(file)
+    sitemap_generator.add(new_url, site_data["lastdate"], site_data["priority"], site_data["bilingual"])
+    #
     # Initialize Variable Reflector
-    vref = varref.VariableReflector(template_content)
-
+    #
+    ref = ref.HTMLReflector(template_content, site_info=site_data)
+    #
     # Concatenate header and footer
-    vref.setParam("main_contents", file_content)
-
-    # OGP tags
-    vref.setParam("title", settingData["title"])
-    vref.setParam("type", settingData["type"])
-    vref.setParam("url", settingData["url"])
-    vref.setParam("image", settingData["image"])
-    vref.setParam("description", settingData["description"])
-    vref.setParam("site_name", settingData["site_name"])
-
+    #
+    ref.add_original_param("main_contents", file_content)
+    #
     # Bake HTML file
-    file_content = vref.getHTMLText()
+    #
+    file_content = ref.reflect_all()
     with open(publishFile, "w") as f:
         f.write(file_content)
 
@@ -64,7 +66,9 @@ for file in pattern:
 
 print("Start baking sitemap.xml ...")
 
+#
 # Bake a sitemap.xml
+#
 sitemap_generator.bake()
 
 print("Finished")
