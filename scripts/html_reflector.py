@@ -8,12 +8,14 @@ class HTMLReflector:
     content: AnyStr = None
     pattern = None
     site_info: Dict[AnyStr, AnyStr] = { }
+    site_db: SiteDB = None
     originalParam: Dict[AnyStr, AnyStr] = { }
 
-    def __init__(self, content: AnyStr, site_info: Dict[AnyStr, AnyStr]):
+    def __init__(self, content: AnyStr, site_info: Dict[AnyStr, AnyStr], site_db: SiteDB):
         self.content = content
         self.pattern = re.compile(".*?(<!--cprext (.*)-->).*")
         self.site_info = site_info
+        self.site_db = site_db
 
     def add_original_param(self, name: AnyStr, value: AnyStr):
         #
@@ -76,5 +78,16 @@ class HTMLReflector:
             # Load Original command
             #
             return self.originalParam[arg_list[1]]
+        elif arg_list[0] == "link":
+            #
+            # Link command
+            #
+            fmt = \
+            "<a href=\"{}\"><div class=\"mylink\">\n" \
+            "<img class=\"mylink_image\" alt=\"Link\" src=\"{}\" alt=\"Link\">\n" \
+            "<p class=\"mylink_text\">{}</p>\n" \
+            "</div></a>"
+            link_to_info = self.site_db.get_page_by_name(arg_list[1])
+            return fmt.format(link_to_info["url"], link_to_info["image"], link_to_info["title"])
         else:
             raise NotImplementedError(arg)

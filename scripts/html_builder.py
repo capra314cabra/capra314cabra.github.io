@@ -50,7 +50,7 @@ for file in pattern:
     #
     # Initialize Variable Reflector
     #
-    ref = ref.HTMLReflector(template_content, site_info=site_data)
+    ref = ref.HTMLReflector(template_content, site_info=site_data, site_db=site_db)
     #
     # Concatenate header and footer
     #
