@@ -31,4 +31,4 @@ class SiteDB:
         return None
 
     def get_pages(self) -> List[Dict[AnyStr, AnyStr]]: #):
-        return pages
+        return self.pages
