@@ -26,6 +26,8 @@ class SiteDB:
         #
         for page in self.pages:
             page_name = os.path.basename(page["url"])
+            if page_name == "":
+                page_name = "index.html"
             if page_name == name:
                 return page
         return None
