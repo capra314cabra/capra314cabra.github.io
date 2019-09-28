@@ -2,7 +2,7 @@ import os
 import glob
 import json
 import sitemap_generator as sg
-import html_reflector as ref
+from html_reflector import HTMLReflector
 import site_db as db
 
 TEMPLATE_HTML_PATH = "./template.html"
@@ -49,7 +49,7 @@ for file in pattern:
     #
     # Initialize Variable Reflector
     #
-    ref = ref.HTMLReflector(template_content, site_info=site_data, site_db=site_db)
+    ref = HTMLReflector(template_content, site_info=site_data, site_db=site_db)
     #
     # Concatenate header and footer
     #
