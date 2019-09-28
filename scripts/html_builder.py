@@ -45,8 +45,7 @@ for file in pattern:
     #
     # Add this to the consists of sitemap generator
     #
-    new_url = "https://capra314cabra.github.io/" + os.path.basename(file)
-    sitemap_generator.add(new_url, site_data["lastdate"], site_data["priority"], site_data["bilingual"])
+    sitemap_generator.add(site_data["url"], site_data["lastdate"], site_data["priority"], site_data["bilingual"])
     #
     # Initialize Variable Reflector
     #
