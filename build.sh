@@ -37,3 +37,4 @@ runTask "python3 ./scripts/image_builder.py"
 #
 
 cp ./googlec0a860b5fd253174.html ./publish/googlec0a860b5fd253174.html
+cp ./README.md ./publish/README.md
