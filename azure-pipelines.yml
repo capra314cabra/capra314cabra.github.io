@@ -1,26 +1,27 @@
 trigger:
 - develop
 
-jobs:
-- job:
-  displayName: "Build"
-  pool:
-    vmImage: "ubuntu-latest"
-  steps:
-  - task: UsePythonVersion@0
-    inputs:
-      versionSpec: 3.7
-      addToPath: True
-      architecture: x64
-  - script: |
-      sudo npm install -g typescript
-    displayName: "Install Typescript"
-  - script: |
-      chmod +x ./build.sh
-      ./build.sh
-    displayName: "Run build"
-  - task: PublishBuildArtifacts@1
-    inputs:
-      PathtoPublish: "./publish"
-      ArtifactName: "Homepage"
-    displayName: "Publish all"
+variables:
+  hugoPackagePath: "https://github.com/gohugoio/hugo/releases/download/v0.59.1/hugo_0.59.1_Linux-64bit.deb"
+  hugoPackageName: "hugo_0.59.1_Linux-64bit.deb"
+
+pool:
+  vmImage: "ubuntu-latest"
+steps:
+- script: |
+    wget $(hugoPackagePath)
+    sudo dpkg -i $(hugoPackageName)
+    hugo version
+  displayName: "Install Hugo"
+- script: |
+    chmod +x configure.sh
+    ./configure.sh
+  displayName: "Setup project"
+- script: |
+    hugo
+  displayName: "Build site"
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: "./public"
+    ArtifactName: "Homepage"
+  displayName: "Publish all"

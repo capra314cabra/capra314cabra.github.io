@@ -1,17 +1,6 @@
 #
-# Editor
+# Themes
 #
 
-/.vscode
-
-#
-# Python
-#
-
-**/__pycache__
-
-#
-# Output
-#
-
-/publish
+/public
+/themes/beautifulhugo
