@@ -41,7 +41,7 @@ DefaultContentLanguage = "ja"
 # Site information
 #
 [params]
-  logo = "/images/capra314cabra.png"
+  logo = "/images/capra314cabra.jpg"
 
   rss = true
   useHLJS = true
