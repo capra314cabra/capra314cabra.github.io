@@ -7,7 +7,7 @@ author: capra314cabra
 tags: ["CSharp"]
 ---
 
-{{< figure src="../../images/CSlogo.png" alt="C# icon" class="center" width="320" height="640" >}}
+{{< figure src="../../images/CSlogo.jpg" alt="C# icon" class="center" width="320" height="640" >}}
 
 <br />
 今回はC#で欠かせない存在の`using`の使い方を四つに分けて紹介したいと思います。<br />
