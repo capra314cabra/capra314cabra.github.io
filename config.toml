@@ -9,6 +9,8 @@ paginate = 5
 
 title = "CapraSharp"
 
+enableGitInfo = true
+
 #
 # Bilingual
 #
