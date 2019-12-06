@@ -1,4 +1,11 @@
 #
+# Editor
+#
+/.vs
+/.vscode
+/.idea
+
+#
 # Themes
 #
 
