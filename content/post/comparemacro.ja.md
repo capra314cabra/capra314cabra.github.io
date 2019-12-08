@@ -4,7 +4,7 @@ date: 2019-12-08T22:24:27+09:00
 description: "競プロでPriorityQueueの型として必要なCompare型を作るのを簡略化した話です。"
 draft: false
 author: capra314cabra
-tags: ["C++", "Competitive programming"]
+tags: ["CPlusPlus", "Competitive programming"]
 ---
 
 ## TL;DR
