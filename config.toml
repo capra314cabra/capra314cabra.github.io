@@ -1,65 +1,133 @@
-baseURL = "https://capra314cabra.github.io/"
-theme = "beautifulhugo"
 
-pygmentsCodefences = true
-pygmentsUseClasses = true
-pygmentsCodefencesGuessSyntax = true
+baseurl = "https://capra314cabra.github.io"
+title = "Capra Cabra Blog"
 
-paginate = 5
+theme = "hugo-coder"
 
-title = "CapraSharp"
+languagecode = "en"
+defaultcontentlanguage = "en"
+
+paginate = 20
+canonifyurls = true
+
+pygmentsstyle = "b2"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
 
 enableGitInfo = true
 
-#
-# Bilingual
-#
-DefaultContentLanguage = "ja"
-[languages]
-  [languages.en]
-    languageName = "English"
-    weight = 10
-  [languages.ja]
-    languageName = "Japanese"
-    weight = 20
-
-#
-# Menu contents
-#
-[[menu.main]]
-  name = "Home"
-  weight = 10
-  url = "/"
-[[menu.main]]
-    name = "Tags"
-    url = "tags"
-    weight = 40
-[[menu.main]]
-  name = "Github"
-  weight = 50
-  url = "https://github.com/capra314cabra"
-
-#
-# Site information
-#
 [params]
-  logo = "/images/capra314cabra.jpg"
+    author = "capra314cabra"
+    description = "capra314cabra's blog"
+    keywords = "blog,developer,personal"
+    info = "C# fan and heavy Python user"
+    avatarurl = "/images/capra314cabra.jpg"
+    footercontent = "Programming may help our life."
 
-  rss = true
-  useHLJS = true
+    dateformat = "January 2, 2006"
 
-[author]
-  name = "capra314cabra"
-  website = "capra314cabra.github.io"
-  email = "capra314cabra@gmail.com"
-  github = "capra314cabra"
+    hideCredits = false
+    hideCopyright = false
+    since = 2020
 
-#
-# https://utteranc.es/
-#
-[params.utterances]
-  #
-  # Github
-  #
-  owner = "capra314cabra"
-  repo = "capra314cabra.github.io"
+    # Git Commit in Footer, uncomment the line below to enable it.
+    commit = "https://github.com/capra314cabra/capra314cabra.github.io/tree/"
+
+    rtl = false
+
+    # Specify light/dark colorscheme
+    # Supported values:
+    # "auto" (use preference set by browser)
+    # "dark" (dark background, light foreground)
+    # "light" (light background, dark foreground) (default)
+    colorscheme = "light"
+
+    # Series see also post count
+    maxSeeAlsoItems = 5
+
+    # Custom CSS
+    custom_css = []
+
+    # Custom JS
+    custom_js = []
+
+[params.utteranc]
+    repo = "capra314cabra/capra314cabra.github.io"
+
+[taxonomies]
+    category = "categories"
+    series = "series"
+    tag = "tags"
+
+[[params.social]]
+    name = "Github"
+    icon = "fab fa-github"
+    weight = 1
+    url = "https://github.com/capra314cabra/"
+#[[params.social]]
+#    name = "Gitlab"
+#    icon = "fab fa-gitlab"
+#    weight = 2
+#    url = "https://gitlab.com/capra314cabra/"
+#[[params.social]]
+#    name = "Twitter"
+#    icon = "fab fa-twitter"
+#    weight = 3
+#    url = "https://twitter.com/capra314cabra/"
+#[[params.social]]
+#    name = "LinkedIn"
+#    icon = "fab fa-linkedin"
+#    weight = 4
+#    url = "https://www.linkedin.com/in/capra314cabra/"
+[[params.social]]
+    name = "Medium"
+    icon = "fab fa-medium"
+    weight = 5
+    url = "https://medium.com/@capra314cabra"
+[[params.social]]
+    name = "RSS"
+    icon = "fas fa-rss"
+    weight = 6
+    url = "https://capra314cabra.github.io/index.xml"
+    rel = "alternate"
+    type = "application/rss+xml"
+
+[languages]
+    [languages.en]
+        languagename = "English"
+
+        [languages.en.menu]
+
+            [[languages.en.menu.main]]
+            name = "About"
+            weight = 1
+            url = "/"
+
+            [[languages.en.menu.main]]
+            name = "Blog"
+            weight = 2
+            url = "posts/"
+
+
+    [languages.ja]
+        languagename = "Japanese"
+        title = "Capra Cabra Blog"
+
+        [languages.ja.params]
+            author = "capra314cabra"
+            info = "C#愛好家でPythonのヘビーユーザー"
+            description = "capra314cabraのブログ"
+            keywords = "blog,developer,personal"
+            footercontent = "Programming may help our life."
+
+        [languages.ja.menu]
+
+            [[languages.ja.menu.main]]
+            name = "About"
+            weight = 1
+            url = "/"
+
+            [[languages.ja.menu.main]]
+            name = "Blog"
+            weight = 2
+            url = "posts/"
