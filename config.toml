@@ -46,10 +46,10 @@ enableGitInfo = true
     maxSeeAlsoItems = 5
 
     # Custom CSS
-    custom_css = []
+    custom_css = ["https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap"]
 
     # Custom JS
-    custom_js = ["https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap"]
+    custom_js = ["https://cdn.jsdelivr.net/npm/gist-embed@1.0.3/dist/gist-embed.min.js"]
 
 [params.utteranc]
     repo = "capra314cabra/capra314cabra.github.io"
