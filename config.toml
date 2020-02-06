@@ -115,7 +115,7 @@ enableGitInfo = true
 
         [languages.ja.params]
             author = "capra314cabra"
-            info = "C#愛好家でPythonのヘビーユーザー"
+            info = "C#とPythonの貴公子になる予定です(^^♪"
             description = "capra314cabraのブログ"
             keywords = "blog,developer,personal"
             footercontent = "Programming may help our life."
