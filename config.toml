@@ -49,7 +49,7 @@ enableGitInfo = true
     custom_css = []
 
     # Custom JS
-    custom_js = []
+    custom_js = ["https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap"]
 
 [params.utteranc]
     repo = "capra314cabra/capra314cabra.github.io"
