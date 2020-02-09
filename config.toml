@@ -52,7 +52,7 @@ enableGitInfo = true
     custom_css = ["https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap", "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/vs2015.min.css"]
 
     # Custom JS
-    custom_js = ["https://cdn.jsdelivr.net/npm/gist-embed@1.0.3/dist/gist-embed.min.js"]
+    custom_js = ["https://cdn.jsdelivr.net/npm/gist-embed@1.0.3/dist/gist-embed.min.js", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"]
 
 [params.utteranc]
     repo = "capra314cabra/capra314cabra.github.io"
@@ -64,32 +64,32 @@ enableGitInfo = true
 
 [[params.social]]
     name = "Github"
-    icon = "fab fa-github"
+    icon = "icon fab fa-github"
     weight = 1
     url = "https://github.com/capra314cabra/"
 #[[params.social]]
 #    name = "Gitlab"
-#    icon = "fab fa-gitlab"
+#    icon = "icon fab fa-gitlab"
 #    weight = 2
 #    url = "https://gitlab.com/capra314cabra/"
 #[[params.social]]
 #    name = "Twitter"
-#    icon = "fab fa-twitter"
+#    icon = "icon fab fa-twitter"
 #    weight = 3
 #    url = "https://twitter.com/capra314cabra/"
 #[[params.social]]
 #    name = "LinkedIn"
-#    icon = "fab fa-linkedin"
+#    icon = "icon fab fa-linkedin"
 #    weight = 4
 #    url = "https://www.linkedin.com/in/capra314cabra/"
 [[params.social]]
     name = "Medium"
-    icon = "fab fa-medium"
+    icon = "icon fab fa-medium"
     weight = 5
     url = "https://medium.com/@capra314cabra"
 [[params.social]]
     name = "RSS"
-    icon = "fas fa-rss"
+    icon = "icon fas fa-rss"
     weight = 6
     url = "https://capra314cabra.github.io/index.xml"
     rel = "alternate"
