@@ -15,7 +15,7 @@ Nullcon HackIM 2020に出たのでそのWrite upでも書こうかなーと思�
 
 ### 問題の見た目
 
-<img src="https://capra314cabra.github.io/imgs/hackim2020-game.jpg" alt="Game scene" class="center" width="500" height="300" />
+<img src="https://capra314cabra.github.io/images/hackim2020-game.jpg" alt="Game scene" class="center" width="500" height="300" />
 
 Unity製のGameで、このNPC(白い敵)を1体以上倒すとFlagを手に入れられる、とあります。  
 Playerは剣と体当たり(接触)することでNPCにダメージを与えられますが、敵のHPがとても高く、現実的な時間に倒せないようになっています。
@@ -28,12 +28,12 @@ UnityのWindowsでビルドした時のファイル構成は決まっていま�
 ここで、dnSpyを使用して`AssemblyCSharp.dll`の中のコードを読んでみます。  
 コードの森を探索していると...
 
-<img src="https://capra314cabra.github.io/imgs/hackim2020-code.jpg" alt="Decompiled code" class="center" width="483" height="129" />
+<img src="https://capra314cabra.github.io/images/hackim2020-code.jpg" alt="Decompiled code" class="center" width="483" height="129" />
 
 ダメージを処理している部分を見つけました。  
 HPが0になると`ShowSome`というコールチンを回し始めるようです。
 
-<img src="https://capra314cabra.github.io/imgs/hackim2020-code.jpg" alt="Decompiled code" class="center" width="290" height="123" />
+<img src="https://capra314cabra.github.io/images/hackim2020-code.jpg" alt="Decompiled code" class="center" width="290" height="123" />
 
 `ShowSome`をみると`this.textbox`を見せるようにしているみたいです。  
 これはこのTextBoxがFlagを持っているのでしょう。  
