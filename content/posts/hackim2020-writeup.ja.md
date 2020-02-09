@@ -28,12 +28,33 @@ UnityのWindowsでビルドした時のファイル構成は決まっていま�
 ここで、dnSpyを使用して`AssemblyCSharp.dll`の中のコードを読んでみます。  
 コードの森を探索していると...
 
-<img src="https://capra314cabra.github.io/images/hackim2020-code.jpg" alt="Decompiled code" class="center" width="483" height="129" />
+``` C#
+// Token: 0x06000006 RID: 6
+private void TakeDamage(float damage)
+{
+    this.health -= damage;
+    if (this.health <= 0f)
+    {
+        base.StartCoroutine(this.ShowSome());
+        base.gameObject.SetActive(false);
+    }
+}
+```
 
 ダメージを処理している部分を見つけました。  
 HPが0になると`ShowSome`というコールチンを回し始めるようです。
 
-<img src="https://capra314cabra.github.io/images/hackim2020-code.jpg" alt="Decompiled code" class="center" width="290" height="123" />
+``` C#
+// Token: 0x0600000A RID: 10
+private IEnumerator ShowSome()
+{
+    this.textbox.SetActive(true);
+    yield return new WaitForSeconds(3f);
+    this.textbox.SetActive(false);
+    yield return null;
+    yield break;
+}
+```
 
 `ShowSome`をみると`this.textbox`を見せるようにしているみたいです。  
 これはこのTextBoxがFlagを持っているのでしょう。  
