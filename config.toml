@@ -16,6 +16,9 @@ pygmentscodefencesguesssyntax = true
 
 enableGitInfo = true
 
+[markup.goldmark.renderer]
+    unsafe= true
+
 [params]
     author = "capra314cabra"
     description = "capra314cabra's blog"
@@ -31,7 +34,7 @@ enableGitInfo = true
     since = 2020
 
     # Git Commit in Footer, uncomment the line below to enable it.
-    commit = "https://github.com/capra314cabra/capra314cabra.github.io/tree/"
+    commit = "https://github.com/capra314cabra/capra314cabra.github.io/tree/master"
 
     rtl = false
 
@@ -46,7 +49,7 @@ enableGitInfo = true
     maxSeeAlsoItems = 5
 
     # Custom CSS
-    custom_css = ["https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap"]
+    custom_css = ["https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap", "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/vs2015.min.css"]
 
     # Custom JS
     custom_js = ["https://cdn.jsdelivr.net/npm/gist-embed@1.0.3/dist/gist-embed.min.js"]
