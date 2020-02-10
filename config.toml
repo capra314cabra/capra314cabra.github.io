@@ -114,6 +114,11 @@ enableGitInfo = true
             weight = 2
             url = "posts/"
 
+            [[languages.en.menu.main]]
+            name = "Tags"
+            weight = 3
+            url = "tags/"
+
 
     [languages.ja]
         languagename = "Japanese"
@@ -137,3 +142,8 @@ enableGitInfo = true
             name = "Blog"
             weight = 2
             url = "posts/"
+
+            [[languages.ja.menu.main]]
+            name = "Tags"
+            weight = 3
+            url = "tags/"
