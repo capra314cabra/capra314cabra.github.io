@@ -5,7 +5,7 @@ description: "Unity製の横スクロールアクションゲームです。話�
 draft: false
 ---
 
-<script src="Build/UnityLoader.js" onload="UnityLoader.instantiate('unityContainer', 'Build/WebGL.json');" async></script>
+<script src="Build/UnityLoader.js" onload="UnityLoader.instantiate('unityContainer', 'Build/ForWebGL.json');" async></script>
 
 <div id="unityContainer" style="width: 800px; height: 450px; margin: auto"></div>
 
