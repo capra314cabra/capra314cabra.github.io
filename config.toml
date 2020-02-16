@@ -115,8 +115,13 @@ enableGitInfo = true
             url = "posts/"
 
             [[languages.en.menu.main]]
-            name = "Tags"
+            name = "Games"
             weight = 3
+            url = "games/"
+
+            [[languages.en.menu.main]]
+            name = "Tags"
+            weight = 4
             url = "tags/"
 
 
@@ -144,6 +149,11 @@ enableGitInfo = true
             url = "posts/"
 
             [[languages.ja.menu.main]]
-            name = "Tags"
+            name = "Games"
             weight = 3
+            url = "games/"
+
+            [[languages.ja.menu.main]]
+            name = "Tags"
+            weight = 4
             url = "tags/"
