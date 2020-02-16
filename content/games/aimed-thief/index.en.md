@@ -9,5 +9,5 @@ description: "This is an open-source shooting game. Can you get a high score?"
 
 <div id="unityContainer" style="width: 800px; height: 450px; margin: auto"></div>
 
-This is an open-source game: [GitHub](https://github.com/capra314cabra/AimedThief).
+This is an open-source game: [GitHub](https://github.com/capra314cabra/AimedThief).  
 Fire: Space, Move: WASD or arrow keys
