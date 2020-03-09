@@ -5,6 +5,7 @@ description: "競プロでPriorityQueueの型として必要なCompare型を作�
 draft: false
 author: capra314cabra
 tags: ["CPlusPlus", "Competitive programming"]
+keyword: "競技プログラミング,Compare,C++,Priorityqueue,マクロ"
 ---
 
 ## TL;DR

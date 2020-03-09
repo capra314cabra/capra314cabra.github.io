@@ -4,6 +4,7 @@ date: 2020-02-09T17:54:45+09:00
 draft: false
 description: "HackIM 2020のWrite upです。解けている問題があまりにも少ないのは、気にしないで下さい..."
 tags: ["CTF"]
+keyword: "CTF,Nullcon,HackIM,2020,Zelda"
 ---
 
 Nullcon HackIM 2020に出たのでそのWrite upでも書こうかなーと思った次第です。

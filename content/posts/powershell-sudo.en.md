@@ -5,6 +5,7 @@ description: "We know that sudo command on bash is so useful and there is no com
 draft: false
 author: capra314cabra
 tags: ["Powershell"]
+keyword: "sudo,powershell"
 ---
 
 In this article, I will explain how to implement a command like `sudo` on Powershell.

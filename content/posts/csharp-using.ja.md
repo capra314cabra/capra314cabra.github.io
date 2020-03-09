@@ -5,6 +5,7 @@ description: "C#で欠かせない存在の\"using\"の使い方を四つに分�
 draft: false
 author: capra314cabra
 tags: ["CSharp"]
+keyword: "競技プログラミング,Compare,C++,Priorityqueue,マクロ"
 ---
 
 <img src="https://capra314cabra.github.io/images/CSlogo.svg" alt="C# icon" class="center" width="256" height="256" />

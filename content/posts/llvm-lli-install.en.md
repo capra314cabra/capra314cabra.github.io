@@ -5,6 +5,7 @@ description: "I had missed to install lli, a tool of LLVM, to Windows so I want 
 draft: false
 author: capra314cabra
 tags: ["CPlusPlus", "LLVM"]
+keyword: "LLVM,Windows,lli,llc,llvm-as"
 ---
 
 <img src="https://llvm.org/img/LLVM-Logo-Derivative-1.png" alt="LLVM logo" class="center" width="256" height="256" />

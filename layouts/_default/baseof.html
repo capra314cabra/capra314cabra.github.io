@@ -5,9 +5,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
-    {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
-    {{ with .Site.Params.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
+    {{ if .Params.auhor }}
+      {{ with .Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+    {{ else }}
+      {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+    {{ end }}
+    {{ if .Params.description }}
+      {{ with .Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+    {{ else }}
+      {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+    {{ end }}
+    {{ if .Params.keyword}}
+      {{ with .Params.keyword }}<meta name="keywords" content="{{ . }}">{{ end }}
+    {{ else }}
+      {{ with .Site.Params.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
+    {{ end }}
 
     {{ template "_internal/twitter_cards.html" . }}
     {{ template "_internal/opengraph.html" . }}

@@ -5,6 +5,7 @@ description: "PowershellでBashでいうsudoのような管理者権限で実行
 draft: false
 author: capra314cabra
 tags: ["Powershell"]
+keyword: "sudo,powershell"
 ---
 
 今回紹介することはタイトルそのままです。  

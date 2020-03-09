@@ -5,6 +5,7 @@ description: "ReactでWebアプリケーションを作るときはTypescriptを
 draft: false
 author: capra314cabra
 tags: ["Typescript", "React"]
+keyword: "Typescript,React,Webpack"
 ---
 
 ReactでWebアプリを作ったのですがその時にTypescriptを導入したらその前より作業が捗りました。信じるか信じないかはあなた次第ですが。  
