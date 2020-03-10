@@ -2,6 +2,7 @@
 title: "Aimed Thief"
 date: 2020-02-16T17:49:03+09:00
 description: "Unity製のOpen-Sourceの横スクロールシューティングゲームです。結構難しいと思います。"
+keyword: "shooting game,unity,oss,aimed thief"
 draft: false
 ---
 
