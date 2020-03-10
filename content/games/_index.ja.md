@@ -1,9 +1,11 @@
 ---
 title: "Capra Games"
+chapter: true
 date: 2020-03-10T11:59:55+09:00
 description: "capra314cabraが作ったゲームを公開しています。ぜひ遊んでやってください。"
 keyword: "game,free,capra games"
 draft: false
+ispage: true
 ---
 
 ここでは、私が作ったゲーム(?)を公開しています。サムネをタッチすると遊べます。  

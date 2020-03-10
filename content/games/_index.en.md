@@ -1,9 +1,11 @@
 ---
 title: "Capra Games"
+chapter: true
 date: 2020-03-10T13:36:43+09:00
 description: "There are the games which were made by capra314cabra. Try it!"
 keyword: "game,free,capra games"
 draft: false
+ispage: true
 ---
 
 These are the game which are made by me. You can play them by tapping the thumbnail.  
