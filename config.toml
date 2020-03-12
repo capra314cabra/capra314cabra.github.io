@@ -123,6 +123,10 @@ enableGitInfo = true
             name = "Tags"
             weight = 4
             url = "tags/"
+            [[languages.en.menu.main]]
+            name = "GitHub"
+            weight = 5
+            url = "https://github.com/capra314cabra"
 
 
     [languages.ja]
@@ -157,3 +161,8 @@ enableGitInfo = true
             name = "Tags"
             weight = 4
             url = "tags/"
+
+            [[languages.ja.menu.main]]
+            name = "GitHub"
+            weight = 5
+            url = "https://github.com/capra314cabra"
