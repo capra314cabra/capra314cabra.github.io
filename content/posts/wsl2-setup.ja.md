@@ -26,7 +26,7 @@ WSL2はまだ安定していない様なので __あくまで自己責任で__ �
 
 実は、私はこれを忘れて数分溶かしました。
 
-> WSL 2 is only available in Windows 10 builds 18917 or higher
+> WSL 2 is only available in Windows 10 builds 18917 or higher  
 [Microsoft - WSL2 Install](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install)
 
 なるほど、Windows 10のビルド番号18917番以降を持っている必要があるのですね。  
