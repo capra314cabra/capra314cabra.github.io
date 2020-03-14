@@ -8,6 +8,10 @@ tags: ["WSL2"]
 draft: false
 ---
 
+
+<img src="https://miro.medium.com/max/1326/1*Hv7hbkxpOsNyzt5-Pv8FJQ.png" alt="Windows settings" class="center" width="650" height="400" />
+(Quote from Medium)
+
 Windows上でLinuxをエミュレートしてくれるWSLが進化を遂げ...  
 遂にWSL2が使用出来るようになりました!やったね!  
 
@@ -36,9 +40,9 @@ Microsoftアカウントを持っていると登録は一瞬で終わります�
 
 続いて設定を開きます。そして"更新とセキュリティ"をクリック。
 
-<img src="https://capra314cabra.github.io/images/wsl2-setup/settings.jpg" alt="Windows settings" class="center" width="600" height="200" />
+<img src="https://capra314cabra.github.io/images/wsl2-setup/settings.jpg" alt="Windows settings" class="center" width="900" height="300" />
 
-<img src="https://capra314cabra.github.io/images/wsl2-setup/windows-insider-program.jpg" alt="Windows Insider Program" class="center" width="200" height="400" />
+<img src="https://capra314cabra.github.io/images/wsl2-setup/windows-insider-program.jpg" alt="Windows Insider Program" class="center" width="300" height="600" />
 
 "Windows Insider Program"をクリックして、ログインしてください。  
 Insiderの設定は"スロー"で問題ないと思います。  
@@ -72,7 +76,7 @@ WSLを既にインストールしているよ、という方はここをスル�
 ```
 wsl --set-default-version 2
 ```
-<img src="https://capra314cabra.github.io/images/wsl2-setup/command-prompt.jpg" alt="Running command" class="center" width="550" height="150" />
+<img src="https://capra314cabra.github.io/images/wsl2-setup/command-prompt.jpg" alt="Running command" class="center" width="860" height="210" />
 
 おめでとうございます!これであなたもWSL2デビュー!
 
