@@ -4,8 +4,8 @@ title = "Capra Cabra Blog"
 
 theme = "hugo-coder"
 
-languagecode = "en"
-defaultcontentlanguage = "en"
+languagecode = "ja"
+defaultcontentlanguage = "ja"
 
 paginate = 20
 canonifyurls = true
@@ -132,13 +132,6 @@ enableGitInfo = true
     [languages.ja]
         languagename = "Japanese"
         title = "Capra Cabra Blog"
-
-        [languages.ja.params]
-            author = "capra314cabra"
-            info = "C#とPythonの貴公子になる予定です(^^♪"
-            description = "capra314cabraのブログ"
-            keywords = "blog,developer,personal"
-            footercontent = "Programming may help our life."
 
         [languages.ja.menu]
 
