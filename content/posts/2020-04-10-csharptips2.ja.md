@@ -1,6 +1,6 @@
 ---
 title: "[Today's C# tips] #2 privateなメンバーにアクセスしよう"
-date: 2020-04-09T21:54:39+09:00
+date: 2020-04-10T18:08:04+09:00
 description: ""
 keyword: "C#,tips,today,reflection,system"
 author: "capra314cabra"
