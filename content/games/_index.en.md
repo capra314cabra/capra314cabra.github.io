@@ -25,7 +25,7 @@ This is an open source software:[GitHub](https://github.com/capra314cabra/AimedT
 
 ## Fighter Of Chaos
 
-<a href="https://capra314cabra.github.io/ja/games/fighter-of-chaos">
+<a href="https://capra314cabra.github.io/games/fighter-of-chaos">
     <img src="https://capra314cabra.github.io/images/games/fighter-of-chaos-thumb.png" alt="Fighter Of Chaos Thumbnail" class="center" width="640" height="360" />
 </a>
 
