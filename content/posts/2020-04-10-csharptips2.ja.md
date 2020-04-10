@@ -117,7 +117,7 @@ dummy2
 // using System.Linq;
 
 var passwordVal = members // FieldInfo[]
-    .Where(info => info.Name == "password") // FieldInfo[]
+    .Where(info => info.Name == "password") // IEnumerable<FieldInfo>
     .FirstOrDefault() // FieldInfo
     .GetValue(secret); // Object
 
