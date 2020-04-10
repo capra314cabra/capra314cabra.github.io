@@ -13,7 +13,7 @@ I would be happy if you enjoy them.
 
 ## Aimed Thief
 
-<a href="https://capra314cabra.github.io/games/aimed-thief">
+<a href="https://capra314cabra.github.io/en/games/aimed-thief">
     <img src="https://capra314cabra.github.io/images/games/aimed-thief-thumb.png" alt="Aimed Thief Thumbnail" class="center" width="640" height="360" />
 </a>
 
@@ -22,3 +22,12 @@ Be a pilot of the spaceship and escape from the enemy fortress with the stolen g
 Be careful to hit to the wall.
 
 This is an open source software:[GitHub](https://github.com/capra314cabra/AimedThief)
+
+## Fighter Of Chaos
+
+<a href="https://capra314cabra.github.io/ja/games/fighter-of-chaos">
+    <img src="https://capra314cabra.github.io/images/games/fighter-of-chaos-thumb.png" alt="Fighter Of Chaos Thumbnail" class="center" width="640" height="360" />
+</a>
+
+This is a kind of action games. But it was released for Japanese so you can't play it in English. Sorry.  
+Without negotiation, the world would look like this.

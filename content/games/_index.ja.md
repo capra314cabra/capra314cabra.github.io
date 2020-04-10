@@ -14,7 +14,7 @@ WebGLで作られているゲームはスマホではプレイできないので
 
 ## Aimed Thief
 
-<a href="https://capra314cabra.github.io/ja/games/aimed-thief">
+<a href="https://capra314cabra.github.io/games/aimed-thief">
     <img src="https://capra314cabra.github.io/images/games/aimed-thief-thumb.png" alt="Aimed Thief Thumbnail" class="center" width="640" height="360" />
 </a>
 
@@ -26,7 +26,7 @@ WebGLで作られているゲームはスマホではプレイできないので
 
 ## 混沌の格闘家
 
-<a href="https://capra314cabra.github.io/ja/games/fighter-of-chaos">
+<a href="https://capra314cabra.github.io/games/fighter-of-chaos">
     <img src="https://capra314cabra.github.io/images/games/fighter-of-chaos-thumb.png" alt="Fighter Of Chaos Thumbnail" class="center" width="640" height="360" />
 </a>
 
