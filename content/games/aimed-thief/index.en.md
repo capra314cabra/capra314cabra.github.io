@@ -12,3 +12,12 @@ draft: false
 
 This is an open-source game: [GitHub](https://github.com/capra314cabra/AimedThief).  
 Fire: Space, Move: WASD or arrow keys
+
+<script src="https://utteranc.es/client.js"
+    repo= "capra314cabra/capra314cabra.github.io"
+    issue-term="title"
+    label="comments"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+</script>

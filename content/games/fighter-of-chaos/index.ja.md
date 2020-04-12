@@ -12,3 +12,12 @@ draft: false
 
 サブタイトルにあるように、話し合いで解決しないと世界はこうなります()  
 移動: AD or 矢印キー, ジャンプ: W or 矢印上キー, 攻撃：Space
+
+<script src="https://utteranc.es/client.js"
+    repo= "capra314cabra/capra314cabra.github.io"
+    issue-term="title"
+    label="comments"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+</script>
