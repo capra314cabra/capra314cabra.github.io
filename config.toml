@@ -22,7 +22,7 @@ enableGitInfo = true
 [params]
     author = "capra314cabra"
     description = "capra314cabra's blog"
-    keywords = "blog,developer,personal"
+    keywords = "capra314cabra,blog,developer,personal"
     info = "C# fan and heavy Python user"
     avatarurl = "/images/capra314cabra.jpg"
     footercontent = "Programming may help our life."
