@@ -5,7 +5,7 @@ description: "This is a first page of the new series, Today's C# tips. I will ta
 keyword: "C#,tips,today,linq,sql"
 author: "capra314cabra"
 tags: ["CSharp"]
-series: ["Today's C# tips"]
+series: ["Todays CSharp tips"]
 draft: false
 ---
 

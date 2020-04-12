@@ -5,7 +5,7 @@ description: "記念すべき初回は、C#で配列をSQLのような構文で�
 keyword: "C#,tips,today,linq,sql"
 author: "capra314cabra"
 tags: ["CSharp"]
-series: ["Today's C# tips"]
+series: ["Todays CSharp tips"]
 draft: false
 ---
 

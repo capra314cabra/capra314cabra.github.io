@@ -5,7 +5,7 @@ description: ""
 keyword: "C#,tips,today,reflection,system"
 author: "capra314cabra"
 tags: ["CSharp"]
-series: ["Today's C# tips"]
+series: ["Todays CSharp tips"]
 draft: false
 ---
 
