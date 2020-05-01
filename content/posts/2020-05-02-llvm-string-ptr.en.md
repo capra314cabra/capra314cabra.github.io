@@ -60,7 +60,7 @@ The parent functions of `ifblock` and `mergeblock` are not specified. The functi
 BasicBlock::Create(LLVMContext &Context, const Twine &Name="", Function *Parent=nullptr, BasicBlock *InsertBefore=nullptr);
 ```
 
-![llvm::BasicBlock Class Reference](https://llvm.org/doxygen/classllvm_1_1BasicBlock.html)
+[llvm::BasicBlock Class Reference](https://llvm.org/doxygen/classllvm_1_1BasicBlock.html)
 
 Some operations can be performed without specifying the parent function, but calling `CreateGlobalStringPtr` requires the parent function and BasicBlock.
 

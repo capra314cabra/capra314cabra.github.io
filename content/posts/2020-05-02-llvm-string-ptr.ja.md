@@ -60,7 +60,7 @@ void somefunc() {
 BasicBlock::Create(LLVMContext &Context, const Twine &Name="", Function *Parent=nullptr, BasicBlock *InsertBefore=nullptr);
 ```
 
-![llvm::BasicBlock Class Reference](https://llvm.org/doxygen/classllvm_1_1BasicBlock.html)
+[llvm::BasicBlock Class Reference](https://llvm.org/doxygen/classllvm_1_1BasicBlock.html)
 
 親の関数を指定していなくても様々な操作をできるのですが、`CreateGlobalStringPtr`を呼び出すには関数とBasicBlockが必要条件なので実行に失敗していたわけです。
 
