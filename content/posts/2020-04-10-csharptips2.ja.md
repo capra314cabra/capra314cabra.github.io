@@ -1,7 +1,7 @@
 ---
 title: "[Today's C# tips] #2 privateなメンバーにアクセスしよう"
 date: 2020-04-10T18:08:04+09:00
-description: ""
+description: "System.Reflectionを使用してprivateなメンバーにアクセスする方法をお伝えします。"
 keyword: "C#,tips,today,reflection,system"
 author: "capra314cabra"
 tags: ["CSharp"]
