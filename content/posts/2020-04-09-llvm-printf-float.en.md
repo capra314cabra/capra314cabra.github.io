@@ -1,5 +1,5 @@
 ---
-title: "[LLVM] How show a float value by using printf"
+title: "[LLVM] How to show a float value by using printf"
 date: 2020-05-02T11:39:02+09:00
 description: "Generate LLVM IR that displays the float type variable by using LLVM's C++ API."
 keyword: "llvm,printf,float,ir,c++"
