@@ -33,3 +33,13 @@ WebGLで作られているゲームはスマホではプレイできないので
 横スクロールのアクションゲームです。  
 話し合いで解決できない世界ではこんなことになってしまいます。  
 地味にパンチ出来ます。
+
+## GATAGATA Mental Shooting
+
+<a href="https://capra314cabra.github.io/games/gatagata">
+    <img src="https://capra314cabra.github.io/images/games/gatagata-thumb.jpg" alt="GATAGATA Mental Shooting Thumbnail" class="center" width="640" height="360" />
+</a>
+
+2Dのシューティングゲームです。  
+開発当時、Unityを始めたばかりだったので、デバッグでメンタルがGATAGATAになりました。  
+ステージのレベル調整が全くできていません。(致命的)
