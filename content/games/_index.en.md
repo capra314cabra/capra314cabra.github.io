@@ -31,3 +31,13 @@ This is an open source software:[GitHub](https://github.com/capra314cabra/AimedT
 
 This is a kind of action games. But it was released for Japanese so you can't play it in English. Sorry.  
 Without negotiation, the world would look like this.
+
+## GATAGATA Mental Shooting
+
+<a href="https://capra314cabra.github.io/en/games/gatagata">
+    <img src="https://capra314cabra.github.io/images/games/gatagata-thumb.jpg" alt="GATAGATA Mental Shooting Thumbnail" class="center" width="640" height="360" />
+</a>
+
+This is a 2D shooting game made with unity.  
+GATAGATA means nervous in Japanese.  
+I'm often nervous about finding software bugs.
