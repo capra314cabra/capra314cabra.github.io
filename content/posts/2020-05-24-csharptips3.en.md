@@ -31,7 +31,7 @@ It's calculated on the spot, so it's very useful as a way to execute a temporary
 While Python executes dynamically, C# is a static language, which we have to compile for execution.  
 And you may think the need to compile is too time consuming and therefore fatal to run interactively...
 
-[Wikipedia Dynamic programming language] (https://en.wikipedia.org/wiki/Dynamic_programming_language)
+[Wikipedia Dynamic programming language](https://en.wikipedia.org/wiki/Dynamic_programming_language)
 
 But it's not true.
 
@@ -44,7 +44,7 @@ I will introduce some extensions.
 ### C# REPL
 
 It is provided by the Mono project, which is famous for its C# runtime implementation and open source.  
-[C# REPL] (https://www.mono-project.com/docs/tools+libraries/tools/repl/).
+[C# REPL](https://www.mono-project.com/docs/tools+libraries/tools/repl/).
 
 Usage is very simple. Install Mono and just execute:
 
@@ -61,7 +61,7 @@ If you are using Mono C#, try it now.
 ### dotnet script
 
 This can be used on .NET Core while C# REPL runs on Mono.  
-[dotnet script] (https://github.com/filipw/dotnet-script)
+[dotnet script](https://github.com/filipw/dotnet-script)
 
 You can install it as a .NET global tool by executing:
 
@@ -86,7 +86,7 @@ Note that .NET Core 2.1 or higher is required.
 ### dotnet interactive
 
 This is an official extension for interactive execution.
-[dotnet interactive] (https://github.com/dotnet/interactive)
+[dotnet interactive](https://github.com/dotnet/interactive)
 
 With this extension, you will be able to run C# on a Jupyter notebook.
 
