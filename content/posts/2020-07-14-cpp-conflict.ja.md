@@ -1,0 +1,59 @@
+---
+title: "C++で全てのstd::minやstd::maxにエラーが出た時の対処法"
+date: 2020-07-14T21:53:29+09:00
+description: "C++のコードを書いていると"
+keyword: "c++,max,min,std"
+author: "capra314cabra"
+tags: ["CPlusPlus"]
+draft: false
+---
+
+今日、先程あった出来事なのですが、手元のLinux環境で動いているコードをWindows上でビルドしようとしたら突如大量のエラーが発生。
+
+```
+C:\Program Files (x86)\LLVM\include\llvm/ADT/StringRef.h(286,1): error C2059: syntax error: ')' [D:\a\kaprino\kaprino\build\kprc.vcxproj]
+C:\Program Files (x86)\LLVM\include\llvm/ADT/StringRef.h(346,19): error C2589: '(': illegal token on right side of '::' [D:\a\kaprino\kaprino\build\kprc.vcxproj]
+C:\Program Files (x86)\LLVM\include\llvm/ADT/StringRef.h(346,1): error C2062: type 'unknown-type' unexpected [D:\a\kaprino\kaprino\build\kprc.vcxproj]
+C:\Program Files (x86)\LLVM\include\llvm/ADT/StringRef.h(346,1): error C2059: syntax error: ')' [D:\a\kaprino\kaprino\build\kprc.vcxproj]
+C:\Program Files (x86)\LLVM\include\llvm/ADT/StringRef.h(579,20): error C2589: '(': illegal token on right side of '::' [D:\a\kaprino\kaprino\build\kprc.vcxproj]
+C:\Program Files (x86)\LLVM\include\llvm/ADT/StringRef.h(579,1): error C2062: type 'unknown-type' unexpected [D:\a\kaprino\kaprino\build\kprc.vcxproj]
+C:\Program Files (x86)\LLVM\include\llvm/ADT/StringRef.h(579,1): error C2059: syntax error: ')' [D:\a\kaprino\kaprino\build\kprc.vcxproj]
+C:\Program Files (x86)\LLVM\include\llvm/ADT/StringRef.h(580,43): error C2589: '(': illegal token on right side of '::' [D:\a\kaprino\kaprino\build\kprc.vcxproj]
+C:\Program Files (x86)\LLVM\include\llvm/ADT/StringRef.h(580,1): error C2062: type 'unknown-type' unexpected [D:\a\kaprino\kaprino\build\kprc.vcxproj]
+C:\Program Files (x86)\LLVM\include\llvm/ADT/StringRef.h(580,1): error C2059: syntax error: ')' [D:\a\kaprino\kaprino\build\kprc.vcxproj]
+C:\Program Files (x86)\LLVM\include\llvm/ADT/StringRef.h(680,20): error C2589: '(': illegal token on right side of '::' [D:\a\kaprino\kaprino\build\kprc.vcxproj]
+C:\Program Files (x86)\LLVM\include\llvm/ADT/StringRef.h(680,1): error C2062: type 'unknown-type' unexpected [D:\a\kaprino\kaprino\build\kprc.vcxproj]
+C:\Program Files (x86)\LLVM\include\llvm/ADT/StringRef.h(680,1): error C2059: syntax error: ')' [D:\a\kaprino\kaprino\build\kprc.vcxproj]
+....
+```
+
+エラーが出ている部分を確認すると全て`std::min`と`std::max`でした。
+
+なんで...?
+
+## 結論
+
+`#include<windows.h>`をしていたのが原因でした。(Linux環境では#ifdefではじいていたので気付かなかった)
+
+`windows.h`が内部でincludeしている`windef.h`で
+
+``` C++
+#ifndef NOMINMAX
+#ifndef max
+#define max(a,b) ((a)>(b)?(a):(b))
+#endif
+#ifndef min
+#define min(a,b) ((a)<(b)?(a):(b))
+#endif
+#endif
+```
+
+上記のように`max`マクロと`min`マクロが定義されています。それが`std::max`と`std::min`とconflictしたようです。  
+~~そりゃ気づきませんわ~~
+
+上記のコードから分かるように`#define NOMINMAX`してやればエラーになるのを回避することが出来ます。
+
+## 参考
+
+[windef.h](https://www.rpi.edu/dept/cis/software/g77-mingw32/include/windef.h) コードはここから引用しました。
+[Why is std::min failing when windows.h is included? (Stackover flow)](https://stackoverflow.com/questions/5004858/why-is-stdmin-failing-when-windows-h-is-included)
