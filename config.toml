@@ -54,7 +54,7 @@ enableRobotsTXT = true
     favicon_32 = "images/logo/favicon-32x32.png"
 
     # Custom CSS
-    custom_css = ["https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap", "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/vs2015.min.css"]
+    custom_css = ["https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/vs2015.min.css"]
 
     # Custom JS
     custom_js = ["https://cdn.jsdelivr.net/npm/gist-embed@1.0.3/dist/gist-embed.min.js", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"]
