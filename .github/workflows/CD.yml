@@ -3,7 +3,7 @@ name: CD
 on:
   push:
     branches:
-      - develop
+      - master
 
 jobs:
   build-deploy:
@@ -19,14 +19,14 @@ jobs:
           hugo-version: "latest"
           extended: true
 
-      - name: Build
+      - name: Build site
         run: hugo --minify
 
       - name: Deploy
         if: success()
         uses: crazy-max/ghaction-github-pages@v1
         with:
-          target_branch: master
+          target_branch: gh-pages
           build_dir: ./public
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
