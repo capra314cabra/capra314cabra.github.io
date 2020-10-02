@@ -1,6 +1,6 @@
 
 baseurl = "https://capra314cabra.github.io"
-title = "Capra Cabra Blog"
+title = "Capra Cabra Notes"
 
 theme = "hugo-coder"
 
@@ -23,11 +23,11 @@ enableRobotsTXT = true
 
 [params]
     author = "capra314cabra"
-    description = "capra314cabra's blog"
-    keywords = "capra314cabra,blog,developer,personal"
-    info = "C# fan and heavy Python user"
+    description = "This is a capra314cabra's blog and have a lot of contents about programming."
+    keywords = "capra314cabra,programming,プログラミング,c#,developer,note,blog,personal"
+    info = "Wanna be a developer improving our lives."
     avatarurl = "/images/capra314cabra.jpg"
-    footercontent = "Programming may help our life."
+    footercontent = "Wanna be a developer improving our lives."
 
     dateformat = "January 2, 2006"
 
@@ -72,30 +72,15 @@ enableRobotsTXT = true
     icon = "icon fab fa-github"
     weight = 1
     url = "https://github.com/capra314cabra/"
-#[[params.social]]
-#    name = "Gitlab"
-#    icon = "icon fab fa-gitlab"
-#    weight = 2
-#    url = "https://gitlab.com/capra314cabra/"
-#[[params.social]]
-#    name = "Twitter"
-#    icon = "icon fab fa-twitter"
-#    weight = 3
-#    url = "https://twitter.com/capra314cabra/"
-#[[params.social]]
-#    name = "LinkedIn"
-#    icon = "icon fab fa-linkedin"
-#    weight = 4
-#    url = "https://www.linkedin.com/in/capra314cabra/"
 [[params.social]]
     name = "Medium"
     icon = "icon fab fa-medium"
-    weight = 5
+    weight = 2
     url = "https://medium.com/@capra314cabra"
 [[params.social]]
     name = "RSS"
     icon = "icon fas fa-rss"
-    weight = 6
+    weight = 3
     url = "https://capra314cabra.github.io/index.xml"
     rel = "alternate"
     type = "application/rss+xml"
@@ -132,8 +117,8 @@ enableRobotsTXT = true
 
 
     [languages.ja]
-        languagename = "Japanese"
-        title = "Capra Cabra Blog"
+        languagename = "日本語"
+        title = "Capra Cabra Notes"
 
         [languages.ja.menu]
 
