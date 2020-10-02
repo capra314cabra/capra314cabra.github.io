@@ -1,7 +1,10 @@
-name: Deploy site
+name: Build test
 
 on:
   push:
+    branches:
+      - master
+  pull_request:
     branches:
       - master
 
@@ -21,12 +24,3 @@ jobs:
 
       - name: Build site
         run: hugo --minify
-
-      - name: Deploy
-        if: success()
-        uses: crazy-max/ghaction-github-pages@v1
-        with:
-          target_branch: gh-pages
-          build_dir: ./public
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

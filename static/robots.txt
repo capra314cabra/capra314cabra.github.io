@@ -1,0 +1,5 @@
+User-agent: *
+
+Disallow: /tags
+
+Sitemap:https://capra314cabra.github.io/sitemap.xml
