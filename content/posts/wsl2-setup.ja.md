@@ -2,7 +2,7 @@
 title: "WSL2を使えるようにする"
 date: 2020-03-14T20:04:43+09:00
 description: "WSL2をインストールすることが一筋縄ではいかなかったので、その教訓を書き残します。"
-keyword: "wsl2,インストール,,wsl,windows"
+keyword: "wsl2,インストール,wsl,windows"
 author: "capra314cabra"
 tags: ["WSL2"]
 draft: false
