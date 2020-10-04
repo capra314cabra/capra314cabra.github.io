@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CTF on Capra Cabra Notes</title><link>https://capra314cabra.github.io/tags/ctf/</link><description>Recent content in CTF on Capra Cabra Notes</description><generator>Hugo -- gohugo.io</generator><language>ja</language><lastBuildDate>Sun, 09 Feb 2020 17:54:45 +0900</lastBuildDate><atom:link href="https://capra314cabra.github.io/tags/ctf/index.xml" rel="self" type="application/rss+xml"/><item><title>[CTF Writeup]HackIM 2020のWrite up</title><link>https://capra314cabra.github.io/posts/hackim2020-writeup/</link><pubDate>Sun, 09 Feb 2020 17:54:45 +0900</pubDate><guid>https://capra314cabra.github.io/posts/hackim2020-writeup/</guid><description>Nullcon HackIM 2020に出たのでそのWrite upでも書こうかなーと思った次第です。
+結論から申し上げますと、解けた問題は1問です&amp;hellip;(しかも、その問題はコピペするだけ)
+ただ、そんなのではWrite upとして意味をなさないので、競技終了後も作業していました。
+結局ZeldaAdventureの最初の1問を解くことができたのでそれをここに載せます。
+問題の見た目 Unity製のGameで、このNPC(白い敵)を1体以上倒すとFlagを手に入れられる、とあります。
+Playerは剣と体当たり(接触)することでNPCにダメージを与えられますが、敵のHPがとても高く、現実的な時間に倒せないようになっています。
+やったこと UnityのWindowsでビルドした時のファイル構成は決まっています。
+特に、プログラマーが書いたコードはAssemblyCSharp.dllというファイルにコンパイルされて存在しています。
+ここで、dnSpyを使用してAssemblyCSharp.dllの中のコードを読んでみます。
+コードの森を探索していると&amp;hellip;
+// Token: 0x06000006 RID: 6 private void TakeDamage(float damage) { this.health -= damage; if (this.health &amp;lt;= 0f) { base.StartCoroutine(this.ShowSome()); base.gameObject.SetActive(false); } } ダメージを処理している部分を見つけました。
+HPが0になるとShowSomeというコールチンを回し始めるようです。
+// Token: 0x0600000A RID: 10 private IEnumerator ShowSome() { this.textbox.SetActive(true); yield return new WaitForSeconds(3f); this.textbox.SetActive(false); yield return null; yield break; } ShowSomeをみるとthis.textboxを見せるようにしているみたいです。
+これはこのTextBoxがFlagを持っているのでしょう。
+dnSpyは実はDLLを編集する事が出来るので、このthis.textboxを最初から表示させるようにコードを書き換えれば、Flagゲットです。
+Flag: REVOLUTIONSTARTSWITHME フォントがおしゃれすぎて読みにくかったです(褒めてます)
+おわりに HackIM 2020の前に無力さを感じたので、もっと勉強してから出直します&amp;hellip;</description></item></channel></rss>
